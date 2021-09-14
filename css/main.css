@@ -1,0 +1,108 @@
+:root{
+    --main-white: #fff;
+    --secondary-white: #f5f5f5;
+    --main-grey: #262626;
+}
+
+
+body{
+    margin: 0;
+    padding: 0;
+    color: var(--main-grey);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+section{
+    padding: 5em;
+    height: 50vh;
+}
+
+.page1{
+    height: 25vh;
+}
+
+.page2{
+    background: var(--secondary-white);
+}
+
+section .page-title[data-scroll="in"]{
+    transform: scaleX(1);
+}
+
+section .page-title{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 3em;
+    transition: 0.5s;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+section .page-title::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--main-grey);
+    transform-origin: right;
+    transition: 0.5s;
+}
+
+section .page-title[data-scroll="in"]::before{
+    transform: scaleX(0);
+    transition-delay: 0.5s;
+}
+
+
+.btn{
+    text-decoration: none;
+    color: var(--main-grey);
+    transition: 0.5s;
+}
+
+.btn:hover{
+    cursor: pointer;
+    position: relative;
+    padding: 0 10px 0 10px;
+    background: var(--main-grey);
+    color: var(--main-white);
+}
+
+
+.read-more-text{
+    display: none;
+    opacity: 0;
+    height: 0;
+    transition: 0.5s;
+}
+
+.read-more-text.show{
+    display: block;
+    opacity: 1;
+    display: inline;
+}
+
+.skill-card{
+    display: flex;
+    width: 30vh;
+    height: 30vh;
+    background: #009500;
+    justify-content: center;
+    transition: 0.5s;
+    left: 10em;
+}
+
+.skill-card:hover{
+    background: #01bb01;
+}
+
+.skill-title{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: var(--main-white);
+    padding: 1em;
+    font-size: 2em;
+    font-weight: 700;
+}

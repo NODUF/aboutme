@@ -1,27 +1,37 @@
-<?php include(header.html)?>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>NODUF | Front-end, 3D Developer & UI/UX Designer </title>
+</head>
 
 <body>
     <section class="page1">
-        <div class="page-wrapper">
-            <div class="swipe-in-text">
-                <h1 class="page-title">Hi, my name is Steven.</h1>
-            </div>
-        </div>
-
+        <h1 class="page-title">Hi, my name is <a href="" class="btn">Steven</a></h1> <br>
+        <p class="read-more-container">I am Front-end Developer & UI/UX Designer <br>
+            <span id="more-text" class="read-more-text">I live in Czech Republic, I am 17 years old. I know html, css, javascript, I like making a videos and 3D stuff.</span>
+        </p>
+            <a href="#" class="btn" id="read-more-btn">wanna know more?</a>
     </section>
-
     <section class="page2">
-        
+        <h1 class="page-title">Skills</h1> <br>
+        <div class="skill-card">
+            <p class="skill-Title">IDK YET</p>
+        </div>
     </section>
 
-    <section class="page3">
-        
-    </section>
+    <script src="/js/show-info.js"></script>
 
-    <section class="page4">
-        
-    </section>
-    
+    <script src="/js/scroll-reveal.js"></script>
+    <script type="text/javascript">
+        ScrollOut({
+            targets: 'h1'
+        })
+    </script>
 </body>
 
-<?php include(footer.html)?>
+<footer>
+</footer>
+</html>
