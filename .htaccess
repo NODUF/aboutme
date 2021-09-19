@@ -1,0 +1,11 @@
+Options -MultiViews
+RewriteEngine On
+
+ErrorDocument 404 /404.html
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+# Redirects
+# Redirect 301 /index https://tbr.7m.pl/main
