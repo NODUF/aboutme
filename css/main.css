@@ -1,129 +1,127 @@
-:root{
-    --main-white: #fff;
-    --secondary-white: #f5f5f5;
-    --main-grey: #262626;
+body {
+  background-color: #ffffff;
 }
 
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
+.container {
+  padding: 1.5em 5em 1.5em 5em;
 }
 
-body{
-    margin: 0;
-    padding: 0;
-    color: var(--main-grey);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.container nav {
+  position: -webkit-sticky;
+  position: sticky;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-nav{
-    width: 100%;
-    height: 4em;
-    padding: 1em 5em 1em 5em;
-    position: sticky;
-    top: 0;
-    z-index: 999;
-    overflow: hidden;
+.container nav .left-bar .logo {
+  fill: #242424;
 }
 
-nav li{
-    display: flex;
-    position: relative;
-    right: 4em;
-    background: var(--main-grey);
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.5em;
-    margin: 0 2em 0 0em;
-    overflow: hidden;
+.container nav .right-bar {
+  background-color: #242424;
+  color: #ffffff;
+  border-radius: 5em;
 }
 
-nav li a{
-    color: var(--main-white);
-    text-decoration: none;
-    padding: 1em 2em 1em 2em;
-    transition: 0.3s;
-    overflow: hidden;
+.container nav .right-bar .profile {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0em 0.5em;
 }
 
-
-
-section{
-    padding: 5em;
-    height: 50vh;
-    overflow: hidden;
+.container nav .right-bar .profile i {
+  padding: 0 0.25em;
 }
 
-.page1{
-    height: 25vh;
+.container nav .right-bar .profile button i {
+  padding: 0 0.5em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-.page2{
-    background: var(--secondary-white);
+.container nav .right-bar .profile button:hover {
+  color: #ffffff;
 }
 
-section .page-title[data-scroll="in"]{
-    transform: scaleX(1);
+.container nav .right-bar .profile .username {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-section .page-title{
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    font-size: 3em;
-    transition: 0.5s;
-    transform-origin: left;
-    transform: scaleX(0);
+.container nav .right-bar .profile .profile-expand {
+  color: #797979;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-section .page-title::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: var(--main-grey);
-    transform-origin: right;
-    transition: 0.5s;
+.container .profile-info.active {
+  visibility: visible;
+  opacity: 1;
 }
 
-section .page-title[data-scroll="in"]::before{
-    transform: scaleX(0);
-    transition-delay: 0.5s;
+.container .profile-info {
+  padding: 0.2em;
+  position: absolute;
+  top: 5.5em;
+  right: 5.7em;
+  border-radius: 0.5em;
+  width: 12em;
+  background-color: #242424;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-
-.btn{
-    text-decoration: none;
-    color: var(--main-grey);
-    transition: 0.5s;
+.container .profile-info ul {
+  padding: 0.1em;
+  margin: 0;
 }
 
-.btn:hover{
-    cursor: pointer;
-    position: relative;
-    padding: 0 10px 0 10px;
-    background: var(--main-grey);
-    color: var(--main-white);
+.container .profile-info ul .line {
+  position: relative;
+  background-color: #797979;
+  height: 1px;
+  width: 95%;
+  left: 0.25em;
 }
 
-
-.read-more-text{
-    display: none;
-    opacity: 0;
-    height: 0;
-    transition: 0.5s;
+.container .profile-info ul li {
+  list-style: none;
+  padding: 0.5em 0.2em;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-.read-more-text.show{
-    display: block;
-    opacity: 1;
-    display: inline;
+.container .profile-info ul li a {
+  padding-left: 0.5em;
+  text-align: left;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.bg-element{
-    fill: var(--main-grey);
-    height: 100px;
-    width: 100px;
+.container .profile-info ul li .signout-btn {
+  color: #eb4c4c;
 }
+
+.container .profile-info ul li:hover {
+  background-color: #494949;
+  border-radius: 0.2em;
+}
+/*# sourceMappingURL=main.css.map */

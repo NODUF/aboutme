@@ -9,49 +9,36 @@
 </head>
 
 <body>
-    <!--Navbar-->
-    <nav>
-        <li>
-            <a class="Home" href="#">
-                <i style="font-size:30px;" class="material-icons">home</i>
-            </a>
-            <a class="Favorite" href="#">
-                <i style="font-size:30px;" class="material-icons">favorite</i>
-            </a>
-            <a class="Settings" href="#">
-                <i style="font-size:30px;" class="material-icons">manage_accounts</i>
-            </a>
-        </li>
-    </nav>
+    <div class="container">
+        <!--Navbar-->
+        <nav>
+            <div class="left-bar">
+                <img class="logo" src="img/logo.svg" style="font-size:30px;" alt="">
+            </div>
 
-    <!--SECTIONS-->
-    <section class="page1">
-        <h1 class="page-title">Hi, my name is <a href="" class="btn">Steven</a></h1> <br>
-        <p class="read-more-container">I am Front-end Developer & UI/UX Designer <br>
-            <span id="more-text" class="read-more-text">I live in Czech Republic, I am 17 years old. I know html, css, javascript, I like making a videos and 3D stuff.</span>
-            <a href="#" class="btn" id="read-more-btn">wanna know more?</a>
-        </p>
-        <img src="img/logo.svg" class="bg-element">
-    </section>
+            <div class="right-bar">
+                <div class="profile">
+                    <i style="font-size:20px;" class="material-icons">person</i>
+                    <p class="username">Steven Rose</p>
+                    <button class="profile-expand" onclick="infoToggle();">
+                        <i style="font-size:20px;" class="material-icons-round">expand_more</i>
 
-    <section class="page2">
-        <h1 class="page-title">Skills</h1> <br>
-        <p class="read-more-container">
-            <a href="" class="btn">HTML/CSS/JS</a>
-            <a href="" class="btn">Photoshop/Illustrator</a> <br>
-            <a href="" class="btn">Premiere/After effects</a>
-        </p>
-        <img src="img/logo.svg" class="bg-element">
-    </section>
-
-    <script src="js/show-info.js"></script>
-
-    <script src="js/scroll-reveal.js"></script>
-    <script type="text/javascript">
-        ScrollOut({
-            targets: 'h1'
-        })
-    </script>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div class="profile-info">
+            <ul>
+                <li><a href="" class="profile-btn">Account</a></li>
+                <li><a href="" class="profile-btn">Activate Premium</a></li>
+                <li><a href="" class="profile-btn">Settings</a></li>
+                <div class="line"></div>
+                <li><a href="" class="signout-btn">Sign out</a></li>
+            </ul>
+        </div>
+        <!--Scripts-->
+        <script src="js/profile-info.js"></script>
+    </div>
 </body>
 
 <footer>

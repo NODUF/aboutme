@@ -1,0 +1,121 @@
+$primaryColor: #242424;
+$secondaryColor: #797979;
+$hoverColor: #494949;
+$white: #ffffff;
+$black: #000000;
+$red: #eb4c4c;
+
+body{
+    background-color: $white;
+}
+
+.container{
+    padding: 1.5em 5em 1.5em 5em;
+//Navbar
+    nav{
+        position: sticky;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    
+        .left-bar{
+
+            .logo{
+                fill: $primaryColor;
+            }
+            
+        }
+    
+        .right-bar{
+            background-color: $primaryColor;
+            color: $white;
+            border-radius: 5em;
+
+            .profile{
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                padding: 0em 0.5em;
+
+                i{
+                    padding: 0 0.25em;
+                }
+
+                button i{
+                    padding: 0 0.5em;
+                    transition: 0.5s;
+                }
+
+                button:hover{
+                    color: $white;
+                }
+
+                .username{
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+
+                .profile-expand{
+                    color: $secondaryColor;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+//Profile-Info
+    .profile-info.active{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .profile-info{
+        padding: 0.2em;
+        position: absolute;
+        top: 5.5em;
+        right: 5.7em;
+        border-radius: 0.5em;
+        width: 12em;
+        background-color: $primaryColor;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.2s;
+
+        ul{
+            padding: 0.1em;
+            margin: 0;
+
+            .line{
+                position: relative;
+                background-color: $secondaryColor;
+                height: 1px;
+                width: 95%;
+                left: 0.25em;
+            }
+
+            li{
+                list-style: none;
+                padding: 0.5em 0.2em;
+                cursor: pointer;
+                transition: 0.2s;
+                a{
+                    padding-left: 0.5em;
+                    text-align: left;
+                    text-decoration: none;
+                    color: $white;
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+
+                .signout-btn{
+                    color: $red;
+                }
+            }
+
+            li:hover{
+                background-color: $hoverColor;
+                border-radius: 0.2em;
+            }
+        }
+    }
+
+}
