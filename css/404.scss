@@ -9,10 +9,23 @@ body {
   height: 100%;
   overflow: hidden;
 }
+main{
+  margin-top: 10em;
+  padding: 5em;
+  justify-content: space-between;
+}
+.spacemanGif{
+  text-align: right;
+  float: right;
+  margin-right: -50em;
+  margin-top: -20em;
+}
 body {
+  margin-left: 30em;
+  margin-top: -5em;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-family:"Nunito Sans";
   color: var(--blue);
   font-size: 1em;
@@ -23,10 +36,6 @@ button {
 ul {
   list-style-type: none;
   padding-inline-start: 35px;
-}
-svg {
-  width: 100%;
-  visibility: hidden;
 }
 h1 {
   font-size: 7.5em;
@@ -74,9 +83,30 @@ h2 {
     }
   }
 }
-@media screen and (max-width:768px) {
+.information{
+  position: relative;
+  float: left;
+  text-align: left;
+}
+
+@media screen and (max-width:1366px) {
   body {
+    margin-left: 0em;
+    margin-top: 5em;
     display:block;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  main{
+    margin-top: 0em;
+    padding: 10em;
+  }
+  .spacemanGif{
+    height: 10em;
+  }
+  .information{
+    text-align: center;
   }
   .container {
     margin-top: 70px;

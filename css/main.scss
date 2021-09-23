@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
 $primaryColor: #242424;
 $secondaryColor: #797979;
 $hoverColor: #494949;
@@ -55,7 +56,7 @@ body{
                 }
 
                 .username{
-                    font-family: Arial, Helvetica, sans-serif;
+                    font-family:"Nunito Sans";
                 }
 
                 .profile-expand{
@@ -76,7 +77,7 @@ body{
     .profile-info{
         padding: 0.2em;
         position: absolute;
-        top: 5.5em;
+        top: 5.7em;
         right: 5.7em;
         border-radius: 0.5em;
         width: 12em;
@@ -103,11 +104,12 @@ body{
                 cursor: pointer;
                 transition: 0.2s;
                 a{
+                    display: flex;
                     padding-left: 0.5em;
                     text-align: left;
                     text-decoration: none;
                     color: $white;
-                    font-family: Arial, Helvetica, sans-serif;
+                    font-family:"Nunito Sans";
                 }
 
                 .signout-btn{
@@ -122,4 +124,25 @@ body{
         }
     }
 
+}
+
+@media screen and (max-width:768px) {
+    .container{
+        padding: 1.5em 1.5em;
+
+        .profile{
+
+            .acc-icon{
+                padding: 0;
+            }
+            .username{
+                display: none;
+            }
+        }
+
+        .profile-info{
+            top: 5.5em;
+            right: 2em;
+        }
+    }
 }

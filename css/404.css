@@ -11,16 +11,33 @@ body {
   overflow: hidden;
 }
 
+main {
+  margin-top: 10em;
+  padding: 5em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.spacemanGif {
+  text-align: right;
+  float: right;
+  margin-right: -50em;
+  margin-top: -20em;
+}
+
 body {
+  margin-left: 30em;
+  margin-top: -5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-family: "Nunito Sans";
   color: var(--blue);
   font-size: 1em;
@@ -34,11 +51,6 @@ ul {
   list-style-type: none;
   -webkit-padding-start: 35px;
           padding-inline-start: 35px;
-}
-
-svg {
-  width: 100%;
-  visibility: hidden;
 }
 
 h1 {
@@ -96,9 +108,34 @@ h2 {
   width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+.information {
+  position: relative;
+  float: left;
+  text-align: left;
+}
+
+@media screen and (max-width: 1366px) {
   body {
+    margin-left: 0em;
+    margin-top: 5em;
     display: block;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main {
+    margin-top: 0em;
+    padding: 10em;
+  }
+  .spacemanGif {
+    height: 10em;
+  }
+  .information {
+    text-align: center;
   }
   .container {
     margin-top: 70px;
