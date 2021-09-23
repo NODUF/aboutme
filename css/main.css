@@ -21,7 +21,7 @@ body {
 }
 
 .container nav .left-bar .logo {
-  fill: #242424;
+  visibility: hidden;
 }
 
 .container nav .right-bar {
@@ -31,6 +31,7 @@ body {
 }
 
 .container nav .right-bar .profile {
+  overflow: hidden;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -45,6 +46,10 @@ body {
 
 .container nav .right-bar .profile i {
   padding: 0 0.25em;
+}
+
+.container nav .right-bar .profile button {
+  padding: 1em 0.5em;
 }
 
 .container nav .right-bar .profile button i {

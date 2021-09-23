@@ -1,4 +1,14 @@
-function infoToggle(){
-    const toggleInfo = document.querySelector('.profile-info');
-    toggleInfo.classList.toggle('active')
-}
+const btnIcon = document.querySelector('.profile-expand i');
+const btn = document.querySelector('.profile-expand')
+const toggleInfo = document.querySelector('.profile-info');
+//btnIcon.innerHTML = "expand_less";
+//toggleInfo.classList.toggle('active')
+
+btn.addEventListener('click', (e)=>{
+    toggleInfo.classList.toggle('active');
+    if(btnIcon.innerHTML = 'expand_more'){
+        btnIcon.innerHTML = 'expand_less';
+     }else{
+        btnIcon.innerHTML = 'expand_more';
+     }
+})
