@@ -9,23 +9,10 @@ body {
   height: 100%;
   overflow: hidden;
 }
-main{
-  margin-top: 10em;
-  padding: 5em;
-  justify-content: space-between;
-}
-.spacemanGif{
-  text-align: right;
-  float: right;
-  margin-right: -50em;
-  margin-top: -20em;
-}
 body {
-  margin-left: 30em;
-  margin-top: -5em;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   font-family:"Nunito Sans";
   color: var(--blue);
   font-size: 1em;
@@ -37,6 +24,10 @@ ul {
   list-style-type: none;
   padding-inline-start: 35px;
 }
+svg {
+  width: 100%;
+  visibility: hidden;
+}
 h1 {
   font-size: 7.5em;
   margin: 15px 0px;
@@ -45,7 +36,48 @@ h1 {
 h2 {
   font-weight:bold;
 }
-
+nav {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--green);
+  color: var(--blue);
+  width: 300px;
+  z-index: 1;
+  padding-top: 80px;
+  transform: translateX(-100%);
+  transition: 0.24s cubic-bezier(.52,.01,.8,1);
+  & li {
+    transform: translateX(-5px);
+    transition: 0.16s cubic-bezier(0.44, 0.09, 0.46, 0.84);
+    opacity: 0;
+  }
+  & a {
+    display: block;
+    font-size: 1.75em;
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+    transition: 0.24s ease-in-out;
+    &:hover {
+      text-decoration: none;
+      color: var(--white);
+    }
+  }
+  &[data-state="open"] {
+    transform: translateX(0%);
+    & ul {
+      @for $i from 1 through 4 {
+        li:nth-child(#{$i}) {
+          transition-delay: 0.16s * $i;
+          transform: translateX(0px);
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
 .btn {
   z-index: 1;
   overflow: hidden;
@@ -83,33 +115,13 @@ h2 {
     }
   }
 }
-.information{
-  position: relative;
-  float: left;
-  text-align: left;
-}
-
-@media screen and (max-width:1366px) {
+@media screen and (max-width:768px) {
   body {
-    margin-left: 0em;
-    margin-top: 5em;
     display:block;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-  }
-  main{
-    margin-top: 0em;
-    padding: 10em;
-  }
-  .spacemanGif{
-    height: 10em;
-  }
-  .information{
-    text-align: center;
+    padding: 5em;
   }
   .container {
-    margin-top: 70px;
-    margin-bottom: 70px;
+    margin-top:70px;
+    margin-bottom:70px;
   }
 } 

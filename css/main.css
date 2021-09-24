@@ -1,37 +1,81 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;800&display=swap");
 body {
-  background-color: #ffffff;
+  margin: 0;
 }
 
-.container {
-  padding: 1.5em 5em 1.5em 5em;
+.sections {
+  font-family: "Nunito Sans";
 }
 
-.container nav {
-  position: -webkit-sticky;
-  position: sticky;
+.sections .section-container {
+  padding: 7em 2.5em;
+}
+
+.sections .section-container .page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: 1px solid #2c313b;
+  height: 3em;
+  width: 3em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
-.container nav .left-bar .logo {
-  visibility: hidden;
+.sections .section-container .title {
+  font-size: 4em;
+  font-weight: 900;
+  line-height: 1em;
 }
 
-.container nav .right-bar {
-  background-color: #242424;
+.sections .section-container .subtitle {
+  font-size: 1.2em;
+  font-weight: 800;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #ffffff;
+  padding: 0em 0.2em;
+  border-bottom: 2px solid #2c313b;
+}
+
+.sections .section-container .text a {
+  color: #ffffff;
+  font-weight: 800;
+  text-decoration: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.sections .section-container .text a:hover {
+  color: #1c222d;
+  background-color: #ffffff;
+}
+
+.sections.dark {
+  background-color: #1c222d;
+  color: #ffffff;
+}
+
+.sections.light .title, .sections.light .subtitle, .sections.light .text {
+  color: #000000;
+}
+
+.right-bar {
+  top: 1.5em;
+  right: 1.5em;
+  position: fixed;
+  background-color: #000000;
   color: #ffffff;
   border-radius: 5em;
+  z-index: 999;
 }
 
-.container nav .right-bar .profile {
+.right-bar .profile {
   overflow: hidden;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -45,68 +89,73 @@ body {
   padding: 0em 0.5em;
 }
 
-.container nav .right-bar .profile i {
+.right-bar .profile i {
   padding: 0 0.25em;
 }
 
-.container nav .right-bar .profile button {
+.right-bar .profile button {
   padding: 1em 0.5em;
 }
 
-.container nav .right-bar .profile button i {
+.right-bar .profile button i {
   padding: 0 0.5em;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.container nav .right-bar .profile button:hover {
+.right-bar .profile button:hover {
   color: #ffffff;
 }
 
-.container nav .right-bar .profile .username {
+.right-bar .profile .username {
   font-family: "Nunito Sans";
+  display: none;
 }
 
-.container nav .right-bar .profile .profile-expand {
-  color: #797979;
+.right-bar .profile .profile-expand {
+  color: #cacaca;
   border: none;
   background: none;
   cursor: pointer;
 }
 
-.container .profile-info.active {
+.profile-info.active {
   visibility: visible;
   opacity: 1;
+  height: 9.7em;
 }
 
-.container .profile-info {
+.profile-info {
+  position: fixed;
   padding: 0.2em;
-  position: absolute;
-  top: 5.7em;
-  right: 5.7em;
+  top: 5em;
+  right: 2em;
   border-radius: 0.5em;
   width: 12em;
-  background-color: #242424;
+  background-color: #000000;
   visibility: hidden;
   opacity: 0;
+  height: 0em;
+  overflow-y: hidden;
+  z-index: 999;
   -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
-.container .profile-info ul {
+.profile-info ul {
   padding: 0.1em;
   margin: 0;
 }
 
-.container .profile-info ul .line {
+.profile-info ul .line {
   position: relative;
-  background-color: #797979;
+  background-color: #cacaca;
   height: 1px;
   width: 95%;
   left: 0.25em;
 }
 
-.container .profile-info ul li {
+.profile-info ul li {
   list-style: none;
   padding: 0.5em 0.2em;
   cursor: pointer;
@@ -114,7 +163,7 @@ body {
   transition: 0.2s;
 }
 
-.container .profile-info ul li a {
+.profile-info ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,28 +174,155 @@ body {
   font-family: "Nunito Sans";
 }
 
-.container .profile-info ul li .signout-btn {
+.profile-info ul li .signout-btn {
   color: #eb4c4c;
 }
 
-.container .profile-info ul li:hover {
+.profile-info ul li:hover {
   background-color: #494949;
   border-radius: 0.2em;
 }
 
-@media screen and (max-width: 768px) {
-  .container {
-    padding: 1.5em 1.5em;
+@media screen and (min-width: 1300px) {
+  .sections {
+    font-family: "Nunito Sans";
   }
-  .container .profile .acc-icon {
-    padding: 0;
+  .sections .section-container {
+    padding: 10em 25em;
   }
-  .container .profile .username {
-    display: none;
+  .sections .section-container .page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border: 1px solid #2c313b;
+    height: 3em;
+    width: 3em;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .container .profile-info {
-    top: 5.5em;
+  .sections .section-container .title {
+    font-size: 4em;
+    font-weight: 900;
+    line-height: 1em;
+  }
+  .sections .section-container .subtitle {
+    font-size: 1.2em;
+    font-weight: 800;
+  }
+  .sections .section-container .section-dark {
+    color: #ffffff;
+    background-color: #1c222d;
+  }
+  .sections .section-container .section-light {
+    background-color: #ffffff;
+  }
+  .right-bar {
+    top: 1.5em;
+    right: 1.5em;
+    position: fixed;
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 5em;
+    z-index: 999;
+  }
+  .right-bar .profile {
+    overflow: hidden;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0em 0.5em;
+  }
+  .right-bar .profile i {
+    padding: 0 0.25em;
+  }
+  .right-bar .profile button {
+    padding: 1em 0.5em;
+  }
+  .right-bar .profile button i {
+    padding: 0 0.5em;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  .right-bar .profile button:hover {
+    color: #ffffff;
+  }
+  .right-bar .profile .username {
+    font-family: "Nunito Sans";
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .right-bar .profile .profile-expand {
+    color: #cacaca;
+    border: none;
+    background: none;
+    cursor: pointer;
+  }
+  .profile-info.active {
+    visibility: visible;
+    opacity: 1;
+    height: 9.7em;
+  }
+  .profile-info {
+    position: fixed;
+    padding: 0.2em;
+    top: 5.7em;
     right: 2em;
+    border-radius: 0.5em;
+    width: 12em;
+    background-color: #000000;
+    visibility: hidden;
+    opacity: 0;
+    height: 0em;
+    overflow-y: hidden;
+    z-index: 999;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .profile-info ul {
+    padding: 0.1em;
+    margin: 0;
+  }
+  .profile-info ul .line {
+    position: relative;
+    background-color: #cacaca;
+    height: 1px;
+    width: 95%;
+    left: 0.25em;
+  }
+  .profile-info ul li {
+    list-style: none;
+    padding: 0.5em 0.2em;
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .profile-info ul li a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0.5em;
+    text-align: left;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Nunito Sans";
+  }
+  .profile-info ul li .signout-btn {
+    color: #eb4c4c;
+  }
+  .profile-info ul li:hover {
+    background-color: #494949;
+    border-radius: 0.2em;
   }
 }
 /*# sourceMappingURL=main.css.map */

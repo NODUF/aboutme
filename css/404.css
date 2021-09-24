@@ -11,33 +11,16 @@ body {
   overflow: hidden;
 }
 
-main {
-  margin-top: 10em;
-  padding: 5em;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.spacemanGif {
-  text-align: right;
-  float: right;
-  margin-right: -50em;
-  margin-top: -20em;
-}
-
 body {
-  margin-left: 30em;
-  margin-top: -5em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: "Nunito Sans";
   color: var(--blue);
   font-size: 1em;
@@ -53,6 +36,11 @@ ul {
           padding-inline-start: 35px;
 }
 
+svg {
+  width: 100%;
+  visibility: hidden;
+}
+
 h1 {
   font-size: 7.5em;
   margin: 15px 0px;
@@ -61,6 +49,82 @@ h1 {
 
 h2 {
   font-weight: bold;
+}
+
+nav {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--green);
+  color: var(--blue);
+  width: 300px;
+  z-index: 1;
+  padding-top: 80px;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.24s cubic-bezier(0.52, 0.01, 0.8, 1);
+  transition: 0.24s cubic-bezier(0.52, 0.01, 0.8, 1);
+}
+
+nav li {
+  -webkit-transform: translateX(-5px);
+          transform: translateX(-5px);
+  -webkit-transition: 0.16s cubic-bezier(0.44, 0.09, 0.46, 0.84);
+  transition: 0.16s cubic-bezier(0.44, 0.09, 0.46, 0.84);
+  opacity: 0;
+}
+
+nav a {
+  display: block;
+  font-size: 1.75em;
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: 0.24s ease-in-out;
+  transition: 0.24s ease-in-out;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: var(--white);
+}
+
+nav[data-state="open"] {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+nav[data-state="open"] ul li:nth-child(1) {
+  -webkit-transition-delay: 0.16s;
+          transition-delay: 0.16s;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
+}
+
+nav[data-state="open"] ul li:nth-child(2) {
+  -webkit-transition-delay: 0.32s;
+          transition-delay: 0.32s;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
+}
+
+nav[data-state="open"] ul li:nth-child(3) {
+  -webkit-transition-delay: 0.48s;
+          transition-delay: 0.48s;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
+}
+
+nav[data-state="open"] ul li:nth-child(4) {
+  -webkit-transition-delay: 0.64s;
+          transition-delay: 0.64s;
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+  opacity: 1;
 }
 
 .btn {
@@ -108,34 +172,10 @@ h2 {
   width: 100%;
 }
 
-.information {
-  position: relative;
-  float: left;
-  text-align: left;
-}
-
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 768px) {
   body {
-    margin-left: 0em;
-    margin-top: 5em;
     display: block;
-    text-align: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  main {
-    margin-top: 0em;
-    padding: 10em;
-  }
-  .spacemanGif {
-    height: 10em;
-  }
-  .information {
-    text-align: center;
+    padding: 5em;
   }
   .container {
     margin-top: 70px;
