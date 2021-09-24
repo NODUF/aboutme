@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="ICON" href="img/logo.svg" type="image/ico" />
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
     <title>NODUF | Front-end, 3D Developer & UI/UX Designer </title>
@@ -33,12 +33,18 @@
         <li><a href="" class="signout-btn">Sign out</a></li>
     </ul>
 </div>
-<!--Scripts-->
-<script src="js/profile-info.js"></script>
-    
-<section class="sections light">
+
+<!--SectionsNav-->
+<div class="section-nav">
+    <a class="section-nav-btn active" href="#section-landing">0</a>
+    <a class="section-nav-btn" href="#section-section1">1</a>
+    <a class="section-nav-btn" href="#section-section2">2</a>
+</div>
+
+<!--Sections-->
+<section id="section-landing" class="sections light">
     <div class="section-container">
-        <h1 class="title">WHO AM I?</h1>
+        <h1 class="title">HERO</h1>
         <p class="subtitle">SUBTITLE1</p>
         <p class="text">MADMONQ® is an awesome, health-conscious chewable
             supplement that helps you <br> game better while improving
@@ -47,9 +53,10 @@
             MADMONQ® is a <br> product for you.
         </p>
     </div>
+    <img src="img/lost404.gif" alt="">
 </section>
 
-<section class="sections dark">
+<section id="section-section1" class="sections dark">
     <div class="section-container">
         <p class="page">01</p>
         <h1 class="title">SECTION 1<br>NO WAY!</h1>
@@ -70,7 +77,7 @@
     </div>
 </section>
 
-<section class="sections dark">
+<section id="section-section2" class="sections dark">
     <div class="section-container">
         <p class="page">02</p>
         <h1 class="title">SECTION 2<br>TWO SECTIONS?</h1>
@@ -90,6 +97,10 @@
         </p>
     </div>
 </section>
+
+<!--Scripts-->
+<script src="js/profile-info.js"></script>
+<script src="js/section-nav.js"></script>
 
 </body>
 

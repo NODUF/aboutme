@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;800&display=swap');
-$primaryColor: #242424;
-$secondaryColor: #cacaca;
-$hoverColor: #494949;
 $white: #ffffff;
 $black: #000000;
-$red: #eb4c4c;
 $section-light: #ffffff;
 $section-dark: #1c222d;
 $detail-dark: #2c313b;
 
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
+    overflow-x: hidden;
 }
 
 .sections{
@@ -40,6 +40,8 @@ body{
             color: $white;
             padding: 0em 0.2em;
             border-bottom: 2px solid $detail-dark;
+            width: 200px;
+            position: relative;
         }
         .text{
             a{
@@ -54,7 +56,13 @@ body{
                 background-color: $white;
             }
         }
-    
+    }
+    img{
+        position: absolute;
+        height: 20em;
+        right: -3em;
+        top: 25em;
+        z-index: -1;
     }
 }
 
@@ -74,10 +82,11 @@ body{
     top: 1.5em;
     right: 1.5em;
     position: fixed;
-    background-color: $black;
+    background-color: $section-dark;
     color: $white;
     border-radius: 5em;
     z-index: 999;
+    border: 1px solid $detail-dark;
 
     .profile{
         overflow: hidden;
@@ -129,8 +138,9 @@ body{
     top: 5em;
     right: 2em;
     border-radius: 0.5em;
+    border: 1px solid $detail-dark;
     width: 12em;
-    background-color: $black;
+    background-color: $section-dark;
     visibility: hidden;
     opacity: 0;
     height: 0em;
@@ -144,7 +154,7 @@ body{
 
         .line{
             position: relative;
-            background-color: $secondaryColor;
+            background-color: $detail-dark;;
             height: 1px;
             width: 95%;
             left: 0.25em;
@@ -170,20 +180,61 @@ body{
         }
 
         li:hover{
-            background-color: $hoverColor;
+            background-color: $detail-dark;
             border-radius: 0.2em;
         }
     }
 }
 
 
+.section-nav{
+    position: fixed;
+    top: 40%;
+    right: 0em;
+    font-family: "Nunito Sans";
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    border: 1px solid $detail-dark;
+    overflow: hidden;
+    opacity: 0.5;
+    transition: 0.5s;
+
+    a{
+        text-decoration: none;
+        display: flex;
+        color: $white;
+        background-color: $section-dark;
+        border-top: 1px solid $detail-dark;
+        height: 3em;
+        width: 3em;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+    }
+
+    a:hover{
+        background-color: $detail-dark;
+    }
+
+    a.active{
+        background-color: $detail-dark;
+    }
+}
+
+.section-nav:hover{
+    opacity: 1;
+}
+
+
 
 //DESKTOP
-@media screen and (min-width:1300px) {
+@media screen and (min-width:1100px) {
 
 .sections{
     font-family: "Nunito Sans";
+    display: flex;
     .section-container{
+        justify-content: space-between;
         padding: 10em 25em;
         .page{
             display: flex;
@@ -204,9 +255,6 @@ body{
             font-size: 1.2em;
             font-weight: 800;
         }
-    
-        .text{
-        }
         
         .section-dark{
             color: $white;
@@ -217,6 +265,13 @@ body{
             background-color: $section-light;
         }
     }
+    img{
+        float: left;
+        position: relative;
+        top: 10em;
+        right: 20em;
+        height: 30em;
+    }
 }
 
 
@@ -225,7 +280,6 @@ body{
     top: 1.5em;
     right: 1.5em;
     position: fixed;
-    background-color: $black;
     color: $white;
     border-radius: 5em;
     z-index: 999;
@@ -281,7 +335,6 @@ body{
     right: 2em;
     border-radius: 0.5em;
     width: 12em;
-    background-color: $black;
     visibility: hidden;
     opacity: 0;
     height: 0em;
@@ -295,7 +348,6 @@ body{
 
         .line{
             position: relative;
-            background-color: $secondaryColor;
             height: 1px;
             width: 95%;
             left: 0.25em;
@@ -321,7 +373,6 @@ body{
         }
 
         li:hover{
-            background-color: $hoverColor;
             border-radius: 0.2em;
         }
     }
