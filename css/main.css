@@ -80,6 +80,21 @@ body {
   color: #000000;
 }
 
+.reveal {
+  position: relative;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.reveal.r-active {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+
 .right-bar {
   top: 1.5em;
   right: 1.5em;
@@ -129,7 +144,7 @@ body {
 }
 
 .right-bar .profile .profile-expand {
-  color: #cacaca;
+  color: #2c313b;
   border: none;
   background: none;
   cursor: pointer;
@@ -192,7 +207,7 @@ body {
 }
 
 .profile-info ul li .signout-btn {
-  color: #eb4c4c;
+  color: #c94040;
 }
 
 .profile-info ul li:hover {
@@ -212,6 +227,7 @@ body {
   opacity: 0.5;
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  z-index: 999;
 }
 
 .section-nav a {
@@ -338,7 +354,7 @@ body {
     display: flex;
   }
   .right-bar .profile .profile-expand {
-    color: #cacaca;
+    color: #2c313b;
     border: none;
     background: none;
     cursor: pointer;
@@ -391,7 +407,7 @@ body {
     font-family: "Nunito Sans";
   }
   .profile-info ul li .signout-btn {
-    color: #eb4c4c;
+    color: #c94040;
   }
   .profile-info ul li:hover {
     border-radius: 0.2em;

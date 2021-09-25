@@ -4,6 +4,7 @@ $black: #000000;
 $section-light: #ffffff;
 $section-dark: #1c222d;
 $detail-dark: #2c313b;
+$red: #c94040;
 
 html{
     scroll-behavior: smooth;
@@ -76,6 +77,18 @@ body{
     }
 }
 
+.reveal{
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 1s;
+}
+
+.reveal.r-active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
 
 //Rightbar
 .right-bar{
@@ -117,7 +130,7 @@ body{
         }
 
         .profile-expand{
-            color: $secondaryColor;
+            color: $detail-dark;
             border: none;
             background: none;
             cursor: pointer;
@@ -198,6 +211,7 @@ body{
     overflow: hidden;
     opacity: 0.5;
     transition: 0.5s;
+    z-index: 999;
 
     a{
         text-decoration: none;
@@ -313,7 +327,7 @@ body{
         }
 
         .profile-expand{
-            color: $secondaryColor;
+            color: $detail-dark;
             border: none;
             background: none;
             cursor: pointer;
